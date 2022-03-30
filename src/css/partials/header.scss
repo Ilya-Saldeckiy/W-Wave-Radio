@@ -1,0 +1,200 @@
+
+.header{
+
+  padding-top: 20px;
+
+  &__top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &-logo{
+      margin-right: 80px;
+    }
+
+    &-list{
+      display: flex;
+      align-items: center;
+      margin-right: 80px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &-item{
+      &:not(:last-child){
+        margin-right: 58px;
+      }
+      & a{
+        @include f_20;
+        color: $Black;
+      }
+
+    }
+
+    &-btn{
+      &__block{
+        display: flex;
+        align-items: center;
+      }
+
+      &__search{
+        width: 24px;
+        height: 24px;
+        background-color: unset;
+        padding: 0;
+        stroke: $Primary;
+        margin-right: 24px;
+      }
+
+      &__login{
+        width: 104px;
+        height: 40px;
+        background-color: unset;
+        border: 2px solid $Black;
+        border-radius: 77px;
+        @include f_16;
+        font-weight: 500;
+      }
+    }
+
+  }
+
+  &__bottom{
+    border-top: 1px solid #E6E8EC;
+    border-bottom: 1px solid #E6E8EC;
+    margin-bottom: 0px;
+
+    &-position{
+      display: flex;
+      align-items: center;
+      //padding-bottom: 10px;
+      //padding-top: 10px;
+    }
+
+    &-list{
+      display: flex;
+      align-items: center;
+      margin-right: 52px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 52px;
+      }
+
+      & a {
+        @include f_16;
+        color: $Black;
+      }
+    }
+
+    &-live{
+      &__block{
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+
+      }
+
+      &__item{
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        border-left: 1px solid #E6E8EC;
+        cursor: pointer;
+
+        &:hover{
+          & svg{
+            fill: $Primary;
+          }
+        }
+
+        &:focus{
+          & svg{
+            fill: $primary_light;
+          }
+        }
+
+        &:active{
+          & svg{
+            fill: $primary_shade;
+          }
+        }
+
+        &:last-child{
+          border-right: 1px solid #E6E8EC;
+        }
+
+        &-btn{
+          padding: 0;
+          width: 20px;
+          height: 20px;
+          background-color: unset;
+          margin-right: 10px;
+
+          & svg{
+            fill: #A1A6B4;
+
+            &:focus{
+              fill: $primary_light;
+            }
+
+            &:active{
+              fill: $primary_shade;
+            }
+          }
+        }
+
+        & .live__item{
+          &-block{
+            margin-right: 42px;
+          }
+
+          &-subtittle{
+            @include f_12;
+            line-height: 12px;
+            color: #A1A6B4;
+            margin-bottom: 5px;
+          }
+
+          &-tittle{
+            @include f_16;
+            line-height: 16px;
+            color: $Black;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+    &-age__block{
+      width: 46px;
+      height: 61px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #E6E8EC;
+
+      & span{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: $White;
+        @include f_12;
+        text-align: center;
+        vertical-align: center;
+        line-height: 12px;
+        font-weight: 400;
+        color: #A1A6B4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+  }
+
+}
